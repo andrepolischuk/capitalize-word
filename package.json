@@ -5,7 +5,9 @@
   "keywords": [
     "capitalize",
     "each",
-    "word"
+    "word",
+    "text",
+    "textr"
   ],
   "repository": "andrepolischuk/capitalize-word",
   "devDependencies": {
