@@ -1,5 +1,5 @@
 import test from 'ava';
-import capitalizeWord from './index';
+import capitalizeWord from './index.es5';
 
 const origin = 'A Sentence Can Include Words Grouped Meaningfully To Express A Statement, Question, Exclamation, Request, Command Or Suggestion. С Точки Зрения Пунктуации, Предложение Как Законченная Единица Речи Оформляется В Конце Точкой, Восклицательным Или Вопросительным Знаками — Или Многоточием.';
 
@@ -10,9 +10,8 @@ const upper = 'A SENTENCE CAN INCLUDE WORDS GROUPED MEANINGFULLY TO EXPRESS A ST
 const mixed = 'a senTENCE Can include words grouPED MEAningfully to expreSS A Statement, questiON, EXCLamation, reQuest, command or suggesTION. С тоЧКИ ЗРения пунктуаЦии, ПРЕдложениЕ как законченная единицА РЕЧи офорМЛЯЕТСЯ В КОНЦЕ ТОЧКОЙ, ВОСКЛИЦАТельным иЛи вопросительнЫМ ЗНАКами — или многоточием.';
 
 test('should capitalize each word', t => {
-  t.plan(4);
-  t.true(capitalizeWord(origin) === origin);
-  t.true(capitalizeWord(lower) === origin);
-  t.true(capitalizeWord(upper) === origin);
-  t.true(capitalizeWord(mixed) === origin);
+  t.is(capitalizeWord(origin), origin);
+  t.is(capitalizeWord(lower), origin);
+  t.is(capitalizeWord(upper), origin);
+  t.is(capitalizeWord(mixed), origin);
 });
