@@ -1,11 +1,21 @@
 import test from 'ava';
-import capitalizeWord from './index.es5';
+import capitalize from './index.es5';
 
-const origin = 'A Sentence Can Include Words Grouped Meaningfully To Express A Statement, Question, Exclamation, Request, Command Or Suggestion. С Точки Зрения Пунктуации, Предложение Как Законченная Единица Речи Оформляется В Конце Точкой, Восклицательным Или Вопросительным Знаками — Или Многоточием.';
+const origin = `
+  A Sentence Can Include Words Grouped Meaningfully To Express A Statement,
+  Question, Exclamation, Request, Command Or Suggestion. С Точки Зрения
+  Пунктуации, Предложение Как Законченная Единица Речи Оформляется В Конце
+  Точкой, Восклицательным Или Вопросительным Знаками — Или Многоточием.
+`.trim();
 
-const lower = 'a sentence can include words grouped meaningfully to express a statement, question, exclamation, request, command or suggestion. С точки зрения пунктуации, предложение как законченная единица речи оформляется в конце точкой, восклицательным или вопросительным знаками — или многоточием.';
+const lower = `
+  a sentence can include words grouped meaningfully to express a statement,
+  question, exclamation, request, command or suggestion. С точки зрения
+  пунктуации, предложение как законченная единица речи оформляется в конце
+  точкой, восклицательным или вопросительным знаками — или многоточием.
+`.trim();
 
-test('should capitalize each word', t => {
-  t.is(capitalizeWord(origin), origin);
-  t.is(capitalizeWord(lower), origin);
+test(t => {
+  t.is(capitalize(origin), origin);
+  t.is(capitalize(lower), origin);
 });
