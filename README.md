@@ -11,9 +11,20 @@ npm install --save capitalize-word
 ## Usage
 
 ```js
-var capitalizeWord = require('capitalize-word');
-capitalizeWord('hello world'); // Hello World
+import capitalize from 'capitalize-word';
+
+capitalize('hello world'); // Hello World
 ```
+
+## API
+
+### capitalize(input)
+
+#### input
+
+Type: `string`
+
+Text for transform.
 
 ## License
 
