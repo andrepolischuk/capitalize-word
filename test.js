@@ -1,5 +1,5 @@
 import test from 'ava';
-import capitalize from './index.es5';
+import capitalize from './index';
 
 const origin = `
   A Sentence Can Include Words Grouped Meaningfully To Express A Statement,
