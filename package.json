@@ -1,6 +1,6 @@
 {
   "name": "capitalize-word",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Capitalize each word",
   "main": "index.es5.js",
   "jsnext:main": "index.js",
